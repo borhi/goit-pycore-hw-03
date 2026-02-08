@@ -32,7 +32,7 @@ def get_upcoming_birthdays(users):
 
         try:
             birthday_this_year = birthday.replace(year=today.year)
-        except (ValueError, KeyError) as e:
+        except (ValueError) as e:
             print(f"Warning: Skipping user '{user.get('name', 'Unknown')}' due to invalid date: {e}")
             print()
             continue
